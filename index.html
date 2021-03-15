@@ -1,48 +1,22 @@
-<link rel='manifest' href='/manifest.json'>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Реганись, будь человеком</title>
-<style>
-   .blok-center {
-    position: absolute; /* Абсолютное позиционирование */
-    width: 600px; /* Ширина блока */
-    height: 400px; /* Высота блока */
-    margin: auto; /* Отступ от блока */
-    top: 0; /* Положение блока от верхнего края */
-    bottom: 0; /* Положение блока от нижнего края */
-    left: 0; /* Положение блока от левого края */
-    right: 0; /* Положение блока от правого края */
-    background: #fc0; /* Цвет фона блока */
-    border: 1px solid #000; /* Рамка блока */
-    padding: 10px; /* Отступ внутри блока */
-    overflow: auto; /* Полоса прокрутки */
-   }
-</style>
-<script>
-if (navigator.serviceWorker.controller) {
-console.log('[PWA Builder] active service worker found, no need to register')
-} else {
-navigator.serviceWorker.register('sw.js', {
-scope: './'
-}).then(function(reg) {
-console.log('Service worker has been registered for scope:'+ reg.scope);
-});
-}
-</script>
-<link rel='manifest' href='/manifest.webmanifest'>
-</head>
+    <meta charset="UTF-8">
+    <title>Simple PWA</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="/manifest.json">
 <body>
-<div class="blok-center">
-<form>
-<p>Ваше имя*<br />
-<input class="input" name="name" ENGINE="text" style="width:60%" /></p>
-<p>Электронная почта*<br />
-<input class="input" name="email" type="text" style="width:60%" /></p>
-<p>Тема сообщения<br />
-<input class="input" name="sub" type="text" style="width:60%" /></p>
-<p>Текст сообщения:<br /><textarea name="body" cols="1" rows="5" style="width:60%" /></textarea></p>
-<p><input id="submit" value="Отправить" type="submit" /></p>
-</form>
+<nav>
+    <h1>Somethig going on!!!</h1>
+</nav>
+<header>
+    <h2>Прикинь, работает!!!)</h2>
+</header>
+<div class="container">
+    <div id="posts"></div>
 </div>
+
+<script src="js/app.js"></script>
 </body>
 </html>
